@@ -17,7 +17,11 @@ Why three models instead of one? The same reason NERV used three cores: a single
 mind has blind spots. Each core argues strictly from its imprint — cold
 feasibility, protective ethics, pragmatic intuition — so the vote surfaces
 disagreement a single model would smooth over. Ask it something with real
-tension ("Should we deploy on Friday?") and watch them split.
+tension ("Should we deploy on Friday?") and watch them split — or watch three
+very different value systems reach the same verdict for three very different
+reasons:
+
+![Unanimous verdict with three distinct reasonings](docs/verdict.png)
 
 ## Highlights
 
