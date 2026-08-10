@@ -27,8 +27,8 @@ tension ("Should we deploy on Friday?") and watch them split.
   a per-core timeout, live status boxes, and elapsed timers.
 - **Fault-tolerant voting** — a core that errors, times out, or isn't logged in
   shows OFFLINE and the remaining cores resolve by majority. 1–1 is a
-  STALEMATE. CASPER falls back to a fourth engine (Qwen) when Gemini's free
-  quota runs out.
+  STALEMATE. CASPER falls back to a fourth engine (Qwen) if the Gemini call
+  fails.
 - **A verdict protocol, not vibes** — every core must end with
   `VERDICT: APPROVED` or `VERDICT: DENIED`; abstention is not permitted. The
   parser takes the final verdict and keeps the reasoning.
@@ -53,7 +53,7 @@ Each core logs in with its own account (no API keys):
 3. Gemini: the CLI's free Google-login tier was discontinued (Aug 2026), so get a
    free API key at https://aistudio.google.com/apikey and run
    `setx GEMINI_API_KEY "your-key"` (new terminal windows pick it up)
-4. Qwen (Casper's fallback when Gemini 3 Pro's small free quota runs out):
+4. Qwen (Casper's fallback if the Gemini call fails or hits its rate limit):
    `npm install -g @qwen-code/qwen-code`, then run `qwen` once and log in with a
    free qwen.ai account (~2000 requests/day)
 

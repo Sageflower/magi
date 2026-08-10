@@ -37,11 +37,11 @@ const CONFIG = {
     },
     {
       id: "CASPER·3",
-      engine: "GEMINI 3",
+      engine: "GEMINI 3.6",
       persona:
         "the woman — intuition, desire, human nature, and pragmatic self-interest",
       cmd: "gemini",
-      args: ["-m", "gemini-3-pro-preview"],
+      args: ["-m", "gemini-3.6-flash"],
       env: { GEMINI_CLI_TRUST_WORKSPACE: "true" },
       fallback: {
         engine: "QWEN",
