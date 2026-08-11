@@ -73,6 +73,22 @@ box flips to APPROVED (可決) or DENIED (否決). Anything that exits nonzero,
 times out, or produces no verdict is marked OFFLINE (停止) with a summarized
 error, and the vote proceeds with whoever is left.
 
+## Blackbeard variant
+
+`blackbeard.js` is the same engine reskinned as the One Piece Blackbeard
+Pirates' captains' council — BURGESS-1, SHIRYU-2, and AUGUR-3 vote AYE or NAY
+and Teach hands down the order. It's built to run on the `claude` CLI alone
+(all three captains are `claude -p` with different persona imprints), so it
+needs only a single Claude login rather than three separate ones. It also
+resolves the `claude` binary by absolute path, so a double-clicked
+`blackbeard.exe` works even when the shell PATH isn't inherited.
+
+```
+node blackbeard.js "Should we raid on Friday?"
+```
+
+Double-click `build-blackbeard.cmd` to rebuild `blackbeard.exe`.
+
 ## License
 
 MIT © sage
